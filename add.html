@@ -1,0 +1,152 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function addi()
+{ 
+  var num1 = parseInt(document.getElementById("first").value)
+  var num2 = parseInt(document.getElementById("second").value)
+  var total= num1+num2
+  document.getElementById("result").value=total
+  
+}
+
+function odd_even()
+{
+
+  var num = parseInt(document.getElementById("num").value)
+  if (num%2==0)
+     {
+       document.getElementById("result1").value="Even"
+     }
+  else
+  {
+     document.getElementById("result1").value="ODD"
+  }
+  
+}
+
+function grades()
+{
+  var numm = parseInt(document.getElementById("numm").value)
+  var grade="None"
+  
+  switch(parseInt(numm/10)) {
+       case 9 : grade="A"
+                break
+       case 8 : grade="B"
+                break
+       case 7 : grade="C"
+                break
+       case 6 : grade="D"
+                break
+       case 5 : grade="E"
+                break
+       default: grade="Fail"
+                break
+      
+       }
+   
+   document.getElementById("grade").value=grade
+
+}
+
+function loopsum()
+{
+
+  var n1 = parseInt(document.getElementById("n1").value)
+  var n2 = parseInt(document.getElementById("n2").value)
+  var sum=0
+  
+  var i=0
+  
+  for(i=n1;i<n2+1;i++)
+  {
+    sum += i
+    
+  }
+  
+  document.getElementById("sum").value=sum
+
+  
+
+}
+
+
+
+
+
+</script>
+
+</head>
+
+<body>
+
+<h2> Addition of two numbers </h2>
+
+
+
+<form name="addition">
+Number 1: <br>
+<input type="text" name="Number1" id="first"> <br>
+Number 2: <br>
+<input type="text" name="Number2" id="second"> <br>
+
+Result: <br>
+<input type="text" name="Result" id="result"> <br>
+<input type="button" onclick="addi()" value="Add" /><br>
+
+</form>
+
+<br>
+<br>
+
+<h2> Even or odd </h2>
+
+<form >
+Number : <br>
+<input type="text" name="Number" id="num"> <br>
+Result: <br>
+<input type="text" name="Result" id="result1"> <br>
+
+<input type="button" onclick="odd_even()" value="Classify" /><br>
+
+</form>
+<br>
+<br>
+
+<h2> Grading System </h2>
+
+<form >
+Number : <br>
+<input type="text" name="Number" id="numm"> <br>
+Result: <br>
+<input type="text" name="Grade" id="grade"> <br>
+
+<input type="button" onclick="grades()" value="Calculate" /><br>
+
+</form>
+
+<br>
+<br>
+
+<h2> Loop </h2>
+
+<form >
+Enter the Starting Number : <br>
+<input type="text" name="Number" id="n1"> <br>
+Enter the Ending Number : <br>
+<input type="text" name="Number" id="n2"> <br>
+Result: <br>
+<input type="text" name="Sum" id="sum"> <br>
+
+<input type="button" onclick="loopsum()" value="Calculate" /><br>
+
+</form>
+
+
+
+</body>
+</html>
+
+
